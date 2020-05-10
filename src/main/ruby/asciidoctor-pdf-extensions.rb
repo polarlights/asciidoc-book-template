@@ -1,4 +1,4 @@
-require 'asciidoctor-pdf' unless defined? ::Asciidoctor::Pdf
+require 'asciidoctor-pdf'
 
 module AsciidoctorPdfExtensions
   # Override the built-in layout_toc to move colophon before front of table of contents
@@ -80,6 +80,10 @@ module AsciidoctorPdfExtensions
           part_number = 'NINE'
         elsif sect_id.include? 'chapter-10'
           part_number = 'TEN'
+        elsif sect_id.include? 'chapter-11'
+          part_number = 'ELEVEN'
+        elsif sect_id.include? 'chapter-12'
+          part_number = 'TWELVE'
         end
         if @ppbook
           layout_heading part_number, align: :right, size: 100, style: :bold
@@ -122,4 +126,4 @@ module AsciidoctorPdfExtensions
   end
 end
 
-Asciidoctor::Pdf::Converter.prepend AsciidoctorPdfExtensions
+Asciidoctor::PDF::Converter.prepend AsciidoctorPdfExtensions

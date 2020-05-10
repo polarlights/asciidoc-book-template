@@ -8,6 +8,9 @@
 :subject: JHipster
 :keywords: Angular, Bootstrap, Spring Boot
 :doctype: book
+:last-update-label!:
+:version-label!:
+:nofooter:
 :media: screen
 ifeval::["{media}" != "prepress"]
 :coverfilesuffix: .png
@@ -19,8 +22,8 @@ endif::[]
 :lang: en
 :language: javadocript
 :experimental:
-:pdf-fontsdir: ./styles/pdf/fonts
-:pdf-stylesdir: ./styles/pdf
+:pdf-fontsdir: styles/pdf/fonts
+:pdf-stylesdir: styles/pdf
 :pdf-style: infoq-screen
 ifndef::ebook-format[:leveloffset: 1]
 
